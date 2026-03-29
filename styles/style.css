@@ -73,6 +73,9 @@ ol {
   height: 298px;
   overflow: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .content__details {
@@ -99,11 +102,6 @@ ol {
   gap: 30px;
 }
 
-.content__list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
 .content__video-card {
   display: flex;
   justify-content: space-between;
