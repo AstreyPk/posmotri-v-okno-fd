@@ -91,6 +91,8 @@ ol {
 }
 
 .result__video {
+  width: 100%;
+  height: 100%;
   inline-size: inherit;
   block-size: 100%;
   object-fit: cover;
@@ -130,10 +132,7 @@ ol {
 
 .title {
   font-family: Oswald, sans-serif;
-  width: 259px;
-  height: 210px;
   font-weight: 700;
-  font-style: bold;
   font-size: 75px;
   text-transform: uppercase;
   line-height: 94%;
@@ -151,19 +150,27 @@ ol {
 
 .content__video-card-title {
   display: block;
+  width: 196px;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
   padding-bottom: 6px;
-  line-clamp: 3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .visually-hidden {
@@ -242,7 +249,7 @@ input {
   opacity: 1;
 }
 
-.search-form__checkbox-list:hover {
+.search-form__label-text:hover {
   text-decoration: underline;
 }
 
@@ -255,6 +262,7 @@ input {
   background-color: transparent;
   cursor: pointer;
   inline-size: 100%;
+  min-height: 34px;
 }
 
 .button:active {
@@ -278,13 +286,13 @@ input {
 .search-form__submit-button {
   align-self: flex-end;
   width: 194px;
-  height: 34px;
 }
 
 .content__card-link_current {
   display: block;
   margin: 2px;
   text-decoration: none;
+  background-color: #545050;
 }
 
 .content__card-link:active {
